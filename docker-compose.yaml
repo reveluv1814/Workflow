@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  postgres:
+    container_name: base_postgres1
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=neil
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=mibaseneil
+      - POSTGRES_HOST=localhost
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/var/lib/postgresql/data
+  php:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: php-server1
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    volumes:
+      - ./html:/var/www/html
+volumes:
+  html: {}
+  db: {}
