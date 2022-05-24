@@ -23,3 +23,22 @@ insert into FlujoProceso values('F1','P7','p8','P','ControlDocumentos','Kardex')
 insert into FlujoProceso values('F1','P8','p9','P','ElegirCarrera','Alumno');
 insert into FlujoProceso values('F1','P9','p10','P','Solicitarcodigo','Alumno');
 insert into FlujoProceso values('F1','P10',null,'P','CompraCarnet','Caja');
+
+create table alumno 
+(
+id int,
+nombrecompleto varchar(30),
+coddepto varchar(2),
+promedio float
+)
+
+insert into alumno values(23,'moises','02',70);
+insert into alumno values(25,'mayo','03',50);
+insert into alumno values(31,'moyo','02',45);
+insert into alumno values(32,'julia','02',78);
+insert into alumno values(34,'mercedes','04',87);
+insert into alumno values(36,'camaron','04',88);
+insert into alumno values(40,'cameron','03',90);
+insert into alumno values(21,'dieter','03',75);
+alter table alumno add column cnacimiento varchar(3);
+alter table alumno add column cidentidad varchar(3);
