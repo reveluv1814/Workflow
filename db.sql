@@ -42,3 +42,23 @@ insert into alumno values(40,'cameron','03',90);
 insert into alumno values(21,'dieter','03',75);
 alter table alumno add column cnacimiento varchar(3);
 alter table alumno add column cidentidad varchar(3);
+
+create table FlujoProcesoSeguimiento
+(
+    Flujo VARCHAR(3),
+    Proceso VARCHAR(3),
+    NumeroTramite int,
+    Usuario VARCHAR(15),
+    FechaInicio DATE,
+    HoraInicio TIME,
+    FechaFin DATE,
+    HoraFin TIME
+);
+
+insert into FlujoProcesoSeguimiento values('F1','P1','1000','msilva','2022/04/20','10:00:00','2022/04/20','14:00:00');
+insert into FlujoProcesoSeguimiento values('F1','P2','1000','msilva','2022/04/20','14:01:00','2022/04/22','10:00:00');
+insert into FlujoProcesoSeguimiento values('F1','P3','1000','msilva','2022/04/22','10:01:00',null,null);
+insert into FlujoProcesoSeguimiento values('F2','P1','2020','msilva','2022/04/20','10:10:00','2022/04/21','11:10:00');
+insert into FlujoProcesoSeguimiento values('F2','P2','2020','msilva','2022/04/21','11:11:00',null,null);
+insert into FlujoProcesoSeguimiento values('F1','P1','1010','jhuaranca','2022/04/11','09:00:00','2022/04/11','09:10:00');
+insert into FlujoProcesoSeguimiento values('F1','P2','10','jhuaranca','2022/04/11','09:11:00',null,null);

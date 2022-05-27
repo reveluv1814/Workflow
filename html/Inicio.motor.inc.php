@@ -1,5 +1,5 @@
 <?php
 session_start();
-$_SESSION["nombre"]=$_GET["nombre"];
+$_SESSION["id"]=$_GET["id"];
 //echo $_SESSION["nombre"];
 ?>

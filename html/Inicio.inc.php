@@ -1,3 +1,3 @@
 Inicio de flujo<br>
-introduzca su nombre: 
-<input tye="text" name="nombre" value=""/><br>
+introduzca su ID: 
+<input tye="text" name="id" value=""/><br>
